@@ -1,3 +1,9 @@
+const defaultColors = require("tailwindcss/colors")
+
+const sky = defaultColors.lightBlue
+delete defaultColors.lightBlue
+defaultColors.sky = sky
+
 module.exports = {
    mode: "jit",
    purge: ["./**/*.tsx"],
@@ -5,7 +11,7 @@ module.exports = {
    theme: {
       extend: {
          colors: {
-            ...require("tailwindcss/colors"),
+            ...defaultColors,
          },
       },
    },

@@ -5,8 +5,9 @@ import Head from "next/head"
 
 export default function Home() {
    const [darkmode, setDarkmode] = useState<boolean>(false)
-   const [theme, setTheme] =
-      useState<"system" | "dark" | "light" | undefined>(undefined)
+   const [theme, setTheme] = useState<"system" | "dark" | "light" | undefined>(
+      undefined
+   )
 
    useEffect(() => {
       const dark = document.documentElement.classList.item(0) === "dark"
